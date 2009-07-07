@@ -117,8 +117,7 @@
 			}
 			else
 			{
-				$colActions = Widget::TableData();
-				$colActions->appendChild(Widget::Anchor('Edit', URL . '/symphony/blueprints/sections/edit/' . $page['section_id'] . '/'));
+				$colActions = Widget::TableData(Widget::Anchor('Edit', URL . '/symphony/blueprints/sections/edit/' . $page['section_id'] . '/'));
 				$colActions->appendChild(new XMLElement('span', ', '));
 				$colActions->appendChild(Widget::Anchor('Delete', URL . PF_MANAGE_URL . 'delete/' . $page['section_id'] . '/'));
 			}
@@ -126,10 +125,6 @@
 			if ($isOdd)
 			{
 				$class[] = 'odd';
-			}
-			if (in_array($page['id'], $this->_hilights))
-			{
-				$class[] = 'failed';
 			}
 		
 			return Widget::TableRow(

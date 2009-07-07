@@ -1,12 +1,12 @@
 Page Fields
 -------------------------------------------------------------------------------
 
-Version: 1.0.3
+Version: 1.0.4
 Author: Simon Keary
-Build Date: 2009-07-05
+Build Date: 2009-07-07
 Requirements: Symphony 2.0.3 or greater
 
-Compatibilty: Tested on Symphony 2.0.3 (2009-07-05)
+Compatibilty: Tested on Symphony 2.0.3 (2009-07-07)
 
 This extension aims to to improve the usability of Symphony and provide a simple
 way to associate developer-defined content blocks or fields for pages and simple
@@ -63,3 +63,6 @@ You can change these prefixes if you like by editing lib/page_fields_defines.php
 
 1.0.3
 - Update of install instructions in readme.
+
+1.0.4
+- Fixes to stop warnings being logged.

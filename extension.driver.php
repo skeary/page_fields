@@ -109,8 +109,12 @@
 			//
 		    $dom = new DOMDocument;
 			$dom->preserveWhiteSpace = true; 
-			$dom->loadHTML($context['output']);
 
+			function maskErrors() {}
+			set_error_handler('maskErrors');
+			$dom->loadHTML($context['output']);
+			restore_error_handler();
+	
 			// Locate the form element in the page and get it's action attribute.
 			// This indicates the page that is being rendered.
 			//
